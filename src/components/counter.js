@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState } from 'react';
+import "./counter.css"
 
 function Counter() {
 
@@ -27,7 +28,7 @@ function Counter() {
       <button id="sub" onClick={subButton}>-</button>
       <span id="counter">{count}</span>
       <button id="add" onClick={addButton}>+</button>
-      <button onClick={reset}>Reset</button>
+      <button onClick={reset} className='uniq-butt'>Reset</button>
      </div>
      {count !== 0 ?<div className='container'>
       {count} is {count%2 ===0 ? "Even": "Odd"}
