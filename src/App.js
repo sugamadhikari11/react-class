@@ -4,6 +4,7 @@ import Navigation from './components/navigation';
 import Home from './components/home';
 import Counter from './components/counter';
 import Todolist from './components/todolist';
+import Product from './components/product';
 
 const App = () => {
   return (
@@ -14,6 +15,7 @@ const App = () => {
           <Route exact path="/" element={<Home />} />
           <Route path="/counter" element={<Counter />} />
           <Route path="/todolist" element={<Todolist/>} />
+          <Route path="/product" element={<Product/>} />
         </Routes>
       </div>
     </Router>
