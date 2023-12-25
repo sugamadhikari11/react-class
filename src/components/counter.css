@@ -1,49 +1,52 @@
-.container {
-    width: 300px;
-    height: 150px;
-    background-color: rgb(203, 241, 241);
-    align-items: center;
-    text-align: center;
-    justify-content: center;
-    margin: 3rem auto;
-    padding: 1rem;
-    border-radius: 2rem;
-  }
-  .uniq-butt{
+.counter-contain {
+    width: 350px;
+    height: 280px;
+    flex-direction: column;
+    background-color: #eaeaea;
     display: flex;
+    align-items: center;
+    border-radius: 14px;
+    justify-content: center;
     margin: 1rem auto;
   }
   
-  h1 {
-    font-size: 24px;
-    margin-bottom: 10px;
+  .button-row {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
   }
   
   button {
-    padding: 10px;
+    padding: 10px 20px;
     font-size: 16px;
+    border-radius: 4px;
+    background-color: #2196f3;
+    color: #fff;
     border: none;
-    background-color: #007bff;
-    color: white;
-    cursor: pointer;
     margin: 0 5px;
-  }
-  
-  button:hover {
-    background-color: #0056b3;
+    cursor: pointer;
   }
   
   #counter {
     font-size: 24px;
+    font-weight: bold;
     margin: 0 10px;
   }
   
-  .container:nth-child(2) {
-    margin-top: 30px;
-    font-size: 20px;
-    text-align: center;
+  .uniq-butt {
+    margin-top: 20px;
   }
   
-  .container:nth-child(2) span {
+  .counter-contain:not(:first-child) {
+    margin-top: 20px;
+    font-size: 18px;
     font-weight: bold;
+    position: relative;
+  }
+  
+
+  
+  h1 {
+    font-size: 24px;
+    text-align: center;
   }
