@@ -13,7 +13,7 @@ const products = [
 
 export default function Product() {
   const [searchItem, setSearchItem] = useState('');
-  const [category, setCategory] = useState('All');
+  const [category, setCategory] = useState('All Items');
   const [instockOnly, setInStockOnly] = useState(false);
 
   const handleChange = (event) => {
@@ -47,7 +47,7 @@ export default function Product() {
       );
     }
 
-    if (category !== 'All') {
+    if (category !== 'All Items') {
       filteredProducts = filteredProducts.filter((product) => product.category === category);
     }
 
@@ -76,7 +76,7 @@ export default function Product() {
       <input id="checkbox" type="checkbox" onChange={toggleInstock} checked={instockOnly} />
       <label htmlFor="checkbox">Show only products in stock</label>
       <select id = "selector" value={category} onChange={handleCategoryChange}>
-        <option value="All">All</option>
+        <option value="All Items">All</option>
         <option value="Fruits">Fruits</option>
         <option value="Vegetables">Vegetables</option>
       </select>

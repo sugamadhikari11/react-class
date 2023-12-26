@@ -10,6 +10,10 @@ export default function TodoList() {
     setValue(newValue);
   };
 
+  const deleteTodo = (index) =>{
+    const updatedTodos = [...todos.slice(0, index), ...todos.slice(index + 1)];
+    setTodos(updatedTodos);
+  }
   const addTodo = () => {
     if (value) {
       const newItem = {
@@ -55,7 +59,7 @@ export default function TodoList() {
               <span className={`${todo.completed ? 'strike-through text-red' : ''}`}>
                 {todo.title}
               </span>
-              <button className='delete'>Delete</button>
+              <button className='delete' onClick={() => deleteTodo(index)}>Delete</button>
             </li>
           );
         })}
